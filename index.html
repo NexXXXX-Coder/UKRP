@@ -2,8 +2,125 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>LARP Staff Handbook</title>
-<link rel="stylesheet" href="style.css">
+<title>UKRP Staff Handbook</title>
+
+<style>
+:root{
+  --yellow:#f1c40f;
+  --green:#2ecc71;
+  --dark:#0b1a12;
+  --panel:#10251a;
+  --text:#e6f4ea;
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family:Segoe UI,Arial,sans-serif;
+  background:linear-gradient(135deg,#08140e,#0e2418);
+  color:var(--text);
+}
+
+/* POPUP */
+#ownerPopup{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.9);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+}
+.popup-box{
+  background:var(--panel);
+  padding:40px;
+  border-radius:20px;
+  max-width:420px;
+  text-align:center;
+  border:2px solid var(--yellow);
+}
+.popup-box img{
+  width:110px;
+  border-radius:50%;
+  margin-bottom:15px;
+}
+.popup-box h2{color:var(--yellow)}
+.popup-box .discord{
+  color:var(--green);
+  font-weight:bold;
+  font-size:18px;
+}
+.popup-box button{
+  margin-top:20px;
+  padding:12px 30px;
+  background:var(--green);
+  border:none;
+  color:black;
+  font-weight:bold;
+  border-radius:12px;
+  cursor:pointer;
+}
+
+/* SIDEBAR */
+.sidebar{
+  width:280px;
+  height:100vh;
+  position:fixed;
+  background:linear-gradient(180deg,#0f2a1d,#08140e);
+  padding:22px;
+  border-right:3px solid var(--yellow);
+}
+.sidebar img{
+  width:100%;
+  margin-bottom:10px;
+}
+.sidebar h2{
+  text-align:center;
+  color:var(--yellow);
+  margin-bottom:30px;
+  letter-spacing:1px;
+}
+.sidebar a{
+  display:block;
+  padding:14px 16px;
+  margin-bottom:8px;
+  text-decoration:none;
+  color:var(--text);
+  border-radius:10px;
+  background:#0e2418;
+  transition:.2s;
+}
+.sidebar a:hover{
+  background:var(--green);
+  color:black;
+}
+
+/* CONTENT */
+.content{
+  margin-left:300px;
+  padding:50px;
+  max-width:1400px;
+}
+h1{
+  color:var(--yellow);
+  font-size:48px;
+}
+.section{
+  margin-top:60px;
+}
+.card{
+  background:var(--panel);
+  padding:30px;
+  border-radius:18px;
+  margin-top:25px;
+  border-left:6px solid var(--green);
+}
+footer{
+  margin-top:100px;
+  opacity:.6;
+}
+</style>
 </head>
 
 <body>
@@ -11,68 +128,108 @@
 <!-- OWNER POPUP -->
 <div id="ownerPopup">
   <div class="popup-box">
-    <img src="https://i.postimg.cc/FR3GGDpj/duckie.png" alt="Owner">
-
+    <img src="https://i.postimg.cc/FR3GGDpj/duckie.png">
     <h2>! NexX</h2>
     <p><strong>Owner & Developer</strong></p>
-
     <p>
-      This handbook was created and is maintained by <strong>NexX</strong>.
+      This handbook is owned and developed + maintained by NexX.
+      For issues, concerns, bugs, or development problems: please DM me, limited_nexxx
     </p>
-
-    <p>
-      If you have any issues, concerns, bugs, or development problems,
-      please DM me on Discord:
-    </p>
-
-    <p class="discord">limited_nexxxx</p>
-
-    <button onclick="closePopup()">Continue</button>
+    <p class="discord">Discord: limited_nexxxx</p>
+    <button onclick="closePopup()">Enter Handbook</button>
   </div>
 </div>
 
 <!-- SIDEBAR -->
 <div class="sidebar">
-  <img src="https://i.postimg.cc/KzgB6cv8/larp-logo-removebg-preview.png">
-  <h2>LARP STAFF</h2>
+  <img src="https://i.postimg.cc/RVDf6wQF/UKRP-NEW-LOGO.png">
+  <h2>UKRP STAFF</h2>
 
-  <a href="index.html">Home</a>
-  <a href="punishments.html">Punishments</a>
+  <a href="#home">Home</a>
+  <a href="#punishments">Punishments</a>
+  <a href="#chain">Chain of Command</a>
+  <a href="#ownership">Ownership</a>
+  <a href="#conduct">Staff Conduct</a>
 </div>
 
-<!-- MAIN CONTENT -->
-<div class="content">
+<!-- CONTENT -->
+<div class="content" id="home">
 
-<h1>LARP Staff Handbook</h1>
+<h1>UKRP Staff Handbook</h1>
 
 <div class="card">
 <p>
-Welcome to the official <strong>Los Angeles Roleplay Staff Handbook</strong>.
-This website contains the full governance structure, rules, punishments,
-and expectations for all staff members.
+Welcome to the <strong>UK Roleplay (UKRP)</strong> Staff Handbook.
+This handbook defines authority, punishments, structure, and expectations.
 </p>
 </div>
 
+<div class="section" id="punishments">
+<h2>Punishments</h2>
+<div class="card">
+<ul>
+<li>Minor offenses → Warning / Jail</li>
+<li>Moderate offenses → Kick / Temp Ban</li>
+<li>Severe offenses → Permanent Ban</li>
+<li>Exploiting → Immediate Permanent Ban</li>
+</ul>
+</div>
+</div>
+
+<div class="section" id="chain">
+<h2>Chain of Command</h2>
+<div class="card">
+<ul>
+<li>Ownership</li>
+<li>Board / Directors</li>
+<li>Executive Staff</li>
+<li>Management</li>
+<li>Administration</li>
+<li>Moderation</li>
+<li>Trainees</li>
+</ul>
+<p>
+Chain bypassing is forbidden unless an emergency exists.
+</p>
+</div>
+</div>
+
+<div class="section" id="ownership">
+<h2>Ownership</h2>
 <div class="card">
 <p>
-This handbook applies to <strong>ALL staff members without exception</strong>.
-Failure to follow these policies may result in disciplinary action,
-including termination.
+Ownership retains absolute authority over UKRP.
+All final decisions rest with ownership.
 </p>
+</div>
+</div>
+
+<div class="section" id="conduct">
+<h2>Staff Conduct</h2>
+<div class="card">
+<ul>
+<li>Professional behavior at all times</li>
+<li>No abuse of power</li>
+<li>No leaks or favoritism</li>
+<li>All actions must be justified</li>
+</ul>
+</div>
 </div>
 
 <footer>
-© Los Angeles Roleplay — Official Staff Handbook
+© UKRP — Official Staff Handbook
 </footer>
 
 </div>
 
-<!-- POPUP SCRIPT -->
 <script>
 function closePopup(){
-  document.getElementById("ownerPopup").style.display = "none";
+  document.getElementById("ownerPopup").style.display="none";
 }
 </script>
+
+</body>
+</html>
 
 </body>
 </html>
